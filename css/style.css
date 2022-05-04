@@ -1,0 +1,26 @@
+@font-face {
+  font-family: AmaryxLexis;
+  src: url(../content/fonts/AmaryxLexis-Regular.ttf);
+}
+
+@font-face {
+  font-family: Bloodletter;
+  src: url(../content/fonts/Bloodletter-Regular.ttf);
+}
+
+body {
+  font-family: AmaryxLexis, serif;
+  font-weight: 300;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-family: Bloodletter, serif;
+}
+/*# sourceMappingURL=style.css.map */
