@@ -3,10 +3,89 @@
   src: url(../content/fonts/AmaryxLexis-Regular.ttf);
 }
 
+@font-face {
+  font-family: Bloodletter;
+  src: url(../content/fonts/Bloodletter-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  // border: 1px solid red;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+#background {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+}
+
 body {
+  min-width: fit-content;
+  min-height: fit-content;
+
   font-family: AmaryxLexis, serif;
   font-weight: 300;
   background: black;
   color: white;
   text-align: center;
+
+  &::before {
+    content: '';
+    background-image: url(../content/img/secrets.jpg);
+    background-position: top;
+    filter: opacity(3%);
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  font-size: 1.5em;
+}
+
+li {
+  font-family: AmaryxLexis, serif;
+}
+
+.blooditem {
+  font-family: Bloodletter, serif;
+}
+
+a {
+  font-style: none;
+  text-decoration: none;
+  &:visited {
+    color: red;
+  }
+}
+
+input {
+  margin: 0 auto;
+  margin-top: 2em;
+  font-family: Bloodletter, serif;
+  font-size: 2em;
+  text-align: center;
+
+  background: 0;
+  color: white;
+  border: none;
+  border-bottom: 1px white solid;
+  outline: 0;
+}
+
+audio {
+  margin: 0 auto;
+  margin-top: 50vh;
 }
