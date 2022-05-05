@@ -4,11 +4,11 @@ var textInput = document.querySelector('#textinput');
 console.log(textInput);
 
 var titleArray = [
-  "<li class='blooditem'>Secrets Are Secrets For A Reason</li>",
-  "<li class='blooditem'>Our Toll</li>",
-  "<li class='blooditem'>Ophanim</li>",
-  "<li class='blooditem'>The Lines Between</li>",
-  "<li class='blooditem'>The Ever Infinite Nothing</li>",
+  "<li class='blooditem'>secrets are secrets for a reason</li>",
+  "<li class='blooditem'>our toll</li>",
+  "<li class='blooditem'>ophanim</li>",
+  "<li class='blooditem'>the lines between</li>",
+  "<li class='blooditem'>clawatmyskindigatmyfaceripoutmyhair</li>",
 ];
 var urlArray = [
   "<a href ='./p/sasfar.html'>",
@@ -16,6 +16,7 @@ var urlArray = [
   "<a href ='./p/ophanim.html'>",
   "<a href ='./p/lines.html'>",
   "<a href ='./p/nothing.html'>",
+  "<a href ='./p/erase.html'>",
 ];
 //var list = "<ul>\n    <li><a href='./pages/01.html'> 00</a></li>\n    <li class='blooditem'>Secrets Are Secrets For A Reason</li>\n    <li class='blooditem'>Our Toll</li>\n    <li class='blooditem'>Ophanim</li>\n    <li class='blooditem'>The Lines Between</li>\n    <li class='blooditem'>The Ever Infinite Nothing</li>\n</ul>";
 
@@ -76,9 +77,9 @@ function checkInput() {
 if (localStorage.getItem('ophanim')) {
 }
 localStorage.setItem('void', '1');
-/* document.addEventListener('contextmenu', function (e) {
+document.addEventListener('contextmenu', function (e) {
   e.preventDefault();
-}); */
+});
 var disableselect = function (e) {
   return false;
 };
