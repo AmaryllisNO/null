@@ -12,6 +12,38 @@
     <div id="insert"></div>
 
     <input type="text" id="textinput" placeholder="" />
+
+    <div id="insert2"></div>
   </body>
   <script src="./js/index.js" type="text/javascript"></script>
+  <script type="module">
+    import devtools from './node_modules/devtools-detect/index.js';
+    /* 
+    if (document) {
+      checkDevTools();
+      if (devtools.isOpen) {
+        window.location.pathname = '/content/img/rude.jpg';
+      }
+    } */
+
+    console.log(window.location);
+    // Check if it's open
+    console.log('Is DevTools open:', devtools.isOpen);
+
+    // Check it's orientation, `undefined` if not open
+    console.log('DevTools orientation:', devtools.orientation);
+
+    // Get notified when it's opened/closed or orientation changes
+
+    function checkDevTools() {
+      window.addEventListener('devtoolschange', (event) => {
+        console.log('Is DevTools open:', event.detail.isOpen);
+        console.log('DevTools orientation:', event.detail.orientation);
+        if (event.detail.isOpen) {
+          window.location.href = './content/img/rude.jpg';
+          console.log('dev tools is open');
+        }
+      });
+    }
+  </script>
 </html>

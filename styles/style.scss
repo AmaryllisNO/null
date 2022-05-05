@@ -38,7 +38,39 @@ body {
     content: '';
     background-image: url(../content/img/secrets.jpg);
     background-position: top;
-    filter: opacity(3%);
+    filter: opacity(10%);
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+}
+
+#ophanim {
+  &::before {
+    content: '';
+    background-image: url(../content/img/ophanim1.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: opacity(50%);
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+#claw {
+  &::before {
+    content: '';
+    background-image: url(../content/img/dntlk.png);
+    background-size: cover;
+    background-position: center;
+    filter: opacity(50%);
     min-width: 100%;
     min-height: 100%;
     position: absolute;
@@ -67,12 +99,31 @@ li {
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+                                 supported by Chrome, Edge, Opera and Firefox */
+}
+
+.claw {
+  margin-top: 2em;
+
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: flickering;
+  animation-timing-function: step-start;
+  // color: #631e11;
+
+  // font-size: 96px;
+}
+
+.album {
+  max-width: 430px;
+  margin-top: 2em;
 }
 
 a {
   font-style: none;
   text-decoration: none;
+  color: white;
+
   &:visited {
     color: red;
   }
@@ -95,4 +146,130 @@ input {
 audio {
   margin: 0 auto;
   margin-top: 50vh;
+}
+
+@keyframes flickering {
+  0% {
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  5% {
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  10% {
+    text-shadow: 1px 1px #eee;
+    transform: skewX(-15deg);
+  }
+  15% {
+    color: #ccc;
+    text-shadow: none;
+    transform: skewX(-15deg);
+  }
+  20% {
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  25% {
+    color: #ccc;
+
+    transform: skewX(0);
+  }
+  30% {
+    color: #ccc;
+
+    transform: skewX(0);
+  }
+  35% {
+    color: #ccc;
+
+    transform: skewX(0);
+  }
+  37% {
+    color: #ccc;
+    text-shadow: 1px 1px #eee;
+    transform: skewX(0);
+  }
+  40% {
+    text-shadow: 1px 1px #eee;
+    transform: skewX(0);
+  }
+  45% {
+    text-shadow: 1px 1px #eee;
+    transform: skewX(0);
+  }
+  50% {
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  55% {
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  60% {
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  65% {
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  68% {
+    text-shadow: 1px 1px #eee;
+    transform: skewX(0);
+  }
+  70% {
+    text-shadow: 1px 1px #eee;
+    transform: skewX(0);
+  }
+  75% {
+    text-shadow: 1px 1px #eee;
+    transform: skewX(10deg);
+  }
+  80% {
+    text-shadow: 1px 1px #eee;
+    transform: skewX(10deg);
+  }
+  85% {
+    text-shadow: 1px 1px #eee;
+    transform: skewX(10deg);
+  }
+  90% {
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  95% {
+    text-shadow: 1px 1px #eee;
+    transform: skewX(0);
+  }
+  100% {
+    text-shadow: none;
+    transform: skewX(0);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    max-width: 600px;
+    font-size: 0.8em;
+  }
+
+  #insert {
+    text-overflow: ellipsis;
+  }
+
+  ul {
+    max-width: 250px;
+  }
+
+  li {
+    max-width: 250px;
+  }
+
+  .claw {
+    max-width: 250px;
+    max-height: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
